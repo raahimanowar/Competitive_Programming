@@ -16,4 +16,6 @@ int main() {
             cout << 2 << endl << 1 << " " << (x - 1) << endl;
         }
     }
+
+    return 0;
 }
