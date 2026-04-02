@@ -2,60 +2,62 @@
 
 using namespace std;
 
-int doSum(int a, int b) {
-    int sum = 0;
-
+long long doSum(long long a, long long b) {
     if(a > b){
-        int temp = a;
+        long long temp = a;
         a = b;
         b = temp;
     }
 
-    for (int i = a; i <= b; i++){
-        sum += i;
-    }
+    long long sum = ((b - a + 1) * (a + b)) / 2;
 
     return sum;
 }
 
-int doSumEven(int a, int b) {
-    int sumEven = 0;
-
+long long doSumEven(long long a, long long b) {
      if(a > b){
-        int temp = a;
+        long long temp = a;
         a = b;
         b = temp;
     }
 
-    for (int i = a; i <= b; i++){
-        if(i % 2 == 0){
-            sumEven += i;
-        }
+    if(a % 2 != 0){
+        a += 1;
     }
+    if(b % 2 != 0){
+        b -= 1;
+    }
+
+    long long n = ((b - a) / 2) + 1;
+
+    long long sumEven = ((a + b) * n) / 2;
 
     return sumEven;
 }
 
-int doSumOdd(int a, int b) {
-    int sumOdd = 0;
-
-     if(a > b){
-        int temp = a;
+long long doSumOdd(long long a, long long b) {
+    if(a > b){
+        long long temp = a;
         a = b;
         b = temp;
     }
 
-    for (int i = a; i <= b; i++){
-        if(i % 2 != 0){
-            sumOdd += i;
-        }
+    if(a % 2 == 0){
+        a += 1;
     }
+    if(b % 2 == 0){
+        b -= 1;
+    }
+
+    long long n = ((b - a) / 2) + 1;
+
+    long long sumOdd = ((a + b) * n) / 2;
 
     return sumOdd;
 }
 
 int main() {
-    int A, B, sum, sumEven, sumOdd;
+    long long A, B, sum, sumEven, sumOdd;
 
     cin >> A >> B;
 
