@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    int t;
+
+    cin >> t;
+
+    while (t--) {
+        int x, y;
+
+        cin >> x;
+
+        if (x < 67) {
+            y = x + 1;
+        } else {
+            y = x;
+        }
+
+        cout << y << endl;
+    }
+
+    return 0;
+}
