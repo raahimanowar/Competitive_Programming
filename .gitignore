@@ -1,2 +1,6 @@
+# File Type
 *.exe
 *.o
+
+# Extension Folder
+*.cph
