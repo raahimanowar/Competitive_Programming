@@ -1,6 +1,6 @@
 # File Type
 *.exe
 *.o
-
+*.ps1
 # Extension Folder
 *.cph
